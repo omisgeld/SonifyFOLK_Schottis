@@ -620,22 +620,32 @@ class DataManager {
 
   removeVariable(a){
     let targetIDs = [];
+    let varObj;
 
-    let varObj = a instanceof Variable ? a : this._variables.filter((item, i) => {
-      if(item.id == i){
-        targetIDs.push(i);
-        return true;
-      }
-    }).pop();
-
-    varObj.mute();
-    varObj.disconnect();
-    this.GUI.visualDisplay.removeBlob(varObj.blob);
+    if(a instanceof Variable){
+      varObj = a;
+    } else {
+      a = parseInt(a);
+      varObj = this._variables.find(item => item.id == a);
+    }
     
-    targetIDs.reverse().forEach((item, i) => {
-      this._variables.splice(item, 1);
-    });
-    this.removeMappings(varObj.id);
+
+
+    if(varObj){
+      varObj.mute();
+      varObj.disconnect();
+      this.GUI.visualDisplay.removeBlob(varObj.blob);
+      
+      // av någon anledning tillät jag radering av flera variabler samtidigt.
+      // jag minns inte varför
+      // targetIDs.reverse().forEach((item, i) => {
+      //   this._variables.splice(item, 1);
+      // });
+      this._variables = this._variables.filter(item => item.id != a);
+
+      this.removeMappings(varObj.id);
+    }
+    
   }
 
   get data(){
@@ -1839,8 +1849,12 @@ class GUI {
 
         } else {
           a.href = "#";
-          a.addEventListener("click", fn);
           a.addEventListener("click", e => {
+            e.preventDefault();
+            fn(e);
+          });
+          a.addEventListener("click", e => {
+            e.preventDefault();
             document.querySelectorAll(".menu ul.open").forEach(el => {
               el.classList.remove("open");
             });
