@@ -1,0 +1,210 @@
+{
+    "version": 1,
+    "duration": 60,
+    "variableMappings": [
+        {
+            "name": "Y_Andreas:BackTop",
+            "id": 5,
+            "rowID": "0",
+            "gain": 0,
+            "pan": 0,
+            "state": true,
+            "color": "#819B25",
+            "audioObjectID": 302,
+            "mappings": [
+                {
+                    "parameterID": 304,
+                    "inputLow": 146.2324797,
+                    "inputHigh": 153.4641992,
+                    "outputLow": 51,
+                    "outputHigh": 72,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 22
+                }
+            ]
+        },
+        {
+            "name": "Y_Ami:BackTop",
+            "id": 6,
+            "rowID": "3",
+            "gain": 0,
+            "pan": 0,
+            "state": true,
+            "color": "#AAAD9B",
+            "audioObjectID": 330,
+            "mappings": [
+                {
+                    "parameterID": 332,
+                    "inputLow": 135.6042234,
+                    "inputHigh": 143.1049294,
+                    "outputLow": 6,
+                    "outputHigh": 36,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 23
+                }
+            ]
+        },
+        {
+            "name": "Yvel_Andreas:BackTop",
+            "id": 7,
+            "rowID": "9",
+            "gain": 0.04000000000000001,
+            "pan": 0,
+            "state": true,
+            "color": "#3FB4A6",
+            "audioObjectID": 140,
+            "mappings": [
+                {
+                    "parameterID": 142,
+                    "inputLow": -37.8588602,
+                    "inputHigh": 32.96465434,
+                    "outputLow": 0,
+                    "outputHigh": 1,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": false,
+                    "id": 13
+                },
+                {
+                    "parameterID": 143,
+                    "inputLow": -37.8588602,
+                    "inputHigh": 32.96465434,
+                    "outputLow": 0,
+                    "outputHigh": 1,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 14
+                },
+                {
+                    "parameterID": 145,
+                    "inputLow": -37.8588602,
+                    "inputHigh": 32.96465434,
+                    "outputLow": -1,
+                    "outputHigh": 1,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 18
+                }
+            ]
+        },
+        {
+            "name": "Yvel_Ami:BackTop",
+            "id": 8,
+            "rowID": "12",
+            "gain": 0.0529,
+            "pan": 0,
+            "state": true,
+            "color": "#7CECDD",
+            "audioObjectID": 175,
+            "mappings": [
+                {
+                    "parameterID": 177,
+                    "inputLow": -45.42686056,
+                    "inputHigh": 62.74702992,
+                    "outputLow": 0,
+                    "outputHigh": 1,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": false,
+                    "id": 15
+                },
+                {
+                    "parameterID": 178,
+                    "inputLow": -45.42686056,
+                    "inputHigh": 62.74702992,
+                    "outputLow": 0,
+                    "outputHigh": 1,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 16
+                },
+                {
+                    "parameterID": 180,
+                    "inputLow": -45.42686056,
+                    "inputHigh": 62.74702992,
+                    "outputLow": -1,
+                    "outputHigh": 1,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 17
+                },
+                {
+                    "parameterID": 179,
+                    "inputLow": -45.42686056,
+                    "inputHigh": 62.74702992,
+                    "outputLow": 52.7,
+                    "outputHigh": 57.6,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 19
+                }
+            ]
+        },
+        {
+            "name": "Vel_Andreas:BackTop",
+            "id": 9,
+            "rowID": "36",
+            "gain": 1,
+            "pan": -0.4,
+            "state": true,
+            "color": "#D4E09B",
+            "audioObjectID": 316,
+            "mappings": [
+                {
+                    "parameterID": 318,
+                    "inputLow": 0,
+                    "inputHigh": 1,
+                    "outputLow": 32,
+                    "outputHigh": 80,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 24
+                }
+            ]
+        },
+        {
+            "name": "Vel_Ami:BackTop",
+            "id": 10,
+            "rowID": "39",
+            "gain": 0.17639999999999997,
+            "pan": 2.2,
+            "state": true,
+            "color": "#F6F4D2",
+            "audioObjectID": 344,
+            "mappings": [
+                {
+                    "parameterID": 346,
+                    "inputLow": 0,
+                    "inputHigh": 1,
+                    "outputLow": 33,
+                    "outputHigh": 76,
+                    "relInputLow": 0,
+                    "relInputHigh": 1,
+                    "invert": false,
+                    "state": true,
+                    "id": 25
+                }
+            ]
+        }
+    ]
+}
