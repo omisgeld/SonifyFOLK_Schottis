@@ -21,28 +21,36 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, user-scalable=no" />
-		<title>SonifyFOLK SCHOTTIS - by Lindetorp and Misgeld</title>		
+		<title>SonifyFOLK - by Lindetorp and Misgeld</title>
 		<script src="script/NormalDistribution.js"></script>
 		<script src="script/max.size.js"></script>
 		<script src="script/JSONCrush.min.js"></script>
 
 		<link rel="stylesheet" href="styles/style.css" />
 		<link rel="stylesheet" href="styles/multirange.css" />
+
 	</head>
 
 
 	<body>
 		<div id="container">
-			<h1>SonifyFOLK SCHOTTIS - by Lindetorp and Misgeld</h1>
+			<h1>SonifyFOLK - by Hans Lindetorp and Olof Misgeld</h1>
 			<button id="newBtn">NEW</button>
 			<button id="openBtn">OPEN</button>
 			<button id="saveBtn">SAVE</button>
 			<button id="shareBtn">SHARE</button>
 			<!--button id="statisticsBtn">STATISTICS</button-->
-			<button id="displayModeBtn">Display Mode</button>
+			<!-- <button id="displayModeBtn">Display Mode</button> -->
+			<select>
+				<option value="">Preset...</option>
+				<option value="https://tinyurl.com/5apm7ywd">Svikt and stomp</option>
+				<option value="https://tinyurl.com/yc7v3fdj">Svikt-speed and stomp</option>
+				<option value="https://tinyurl.com/7mrsw3rh">Feet Speed Wind</option>
+				<option value="https://tinyurl.com/3tc9kp5b">Svikt Harmonics</option>
+			</select>
 
 
-			<video controls loop>
+			<video controls loop webkit-playsinline playsinline>
 				<source src="video/Side1.mp4" />
 			</video>
 
@@ -63,6 +71,7 @@
 
 				<button id="zoomOutBtn">-</button>
 				<button id="zoomInBtn">+</button>	
+				<label>Recorded audio: <input id="video-sound" checked type="checkbox" /></label>
 			</div>
 
 			<span id="input-label">Data Range:</span>
@@ -70,7 +79,7 @@
 
 			<div id="variables"></div>
 			<div id="instruction">
-				<p> The motion capture data is recorded in the PMIL-studio at KTH, Stockholm by the violin player Olof Misgeld and with the dancers Ami Dregelid and Andreas Berchtold.
+				<p> DO YOU WANT TO CONTRIBUTE to RESEARCH on MUSIC and DANCE? Please SAVE your sonification and paste it in the <a target="_blank"href="https://forms.gle/7ZxRjuqtH7pj5ygDA">SURVEY!</a> The motion capture data was recorded in the PMIL-studio at KTH, Stockholm by the violin player Olof Misgeld and with the dancers Ami Dregelid and Andreas Berchtold.
 				</p>
 				<h2>Quick Start (currently support for FireFox and Chrome):</h2>
 				<ol>
@@ -83,13 +92,13 @@
 				</ol>
 				<h2>Configure data and sound model:</h2>
 				<ol>
-					<li>Download the <a target="_blank" href="https://github.com/hanslindetorp/SonificationToolkit">Source Files</a></li>
+					<li>Download the <a target="_blank" href="https://github.com/omisgeld/SonifyFOLK">Source Files</a></li>
 					<li>Replace the data with your own by updating the <a href="data.csv">data.csv</a>-file (follow the provided data-structure)</li>
 					<li>Replace the audio configuration by editing the <a href="audio.xml">audio.xml</a>-file (more info at <a href="https://github.com/hanslindetorp/WebAudioXML">https://github.com/hanslindetorp/WebAudioXML</a>)</li>
 					<li>Run your version on a local server or upload the files somewhere</li>
 				</ol>
 				<h3>DEMO videos</h3>
-				<h3>Published article and presentation:</h3>
+				<h3>Published article and presentation WebAudioXML Sonification ToolKit - By Hans Lindetorp:</h3>
 				<p><a href="https://icad2021.icad.org/wp-content/uploads/2021/06/ICAD_2021_9.pdf"></a></p>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/UFLflql1NYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<p>Find more projects relating to my research on my <a href="https://github.com/hanslindetorp">GitHub page</a></p>
@@ -110,5 +119,16 @@
 
 		<script src="script/WebAudioXML.js" data-source="audio.xml"></script>
 		<script src="script/main.js" data-source="configuration.js"></script>
+
+
+		<script>
+			document.querySelector("#container > select").addEventListener("change", e => {
+				window.location.href = e.target.value;
+			});
+			document.querySelector("#video-sound").addEventListener("change", e => {
+				document.querySelector("video").volume = e.target.checked ? 0.2 : 0;
+			});
+			document.querySelector("video").volume = 0.2;
+		</script>
 	</body>
 </html>
